@@ -180,7 +180,7 @@ io.on("connection", (socket) => {
           io.to(room).emit("leaderboard_update", rooms[room].leaderboard);
 
           // Check if enough words have been found to end the game
-          if (rooms[room].gameState.foundWords.length >= 25) {
+          if (rooms[room].gameState.foundWords.length >= 5) {
             // Determine winner
             const winner = rooms[room].leaderboard[0]?.username || null;
 
